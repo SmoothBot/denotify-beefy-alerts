@@ -1,5 +1,5 @@
-from project_name.base import NAME
+from denotify_beefy_alerts.base import NAME
 
 
 def test_base():
-    assert NAME == "project_name"
+    assert NAME == "denotify_beefy_alerts"
