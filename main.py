@@ -20,7 +20,7 @@ async def main():
     hash = (await api.get_abi(network, contract))['hash']
 
     # Create a new alert
-    webhook = "https://discord.com/api/webhooks/webhookski"
+    webhook = "https://denotify.com/api/webhooks"
     trigger = {
         "alertType": "event",
         "network": "optimism",
@@ -36,13 +36,10 @@ async def main():
 
     # TODO - Add support for raw webhooks
     notification = {
-        "notify_type": "notify_discord_webhook",
+        "notify_type": "notify_webhook",
         "notify": {
-            "embed": {
-                "title": "TODO - use standard webhook",
-            },
-            "message": "Call Scheduled",
-            "url": webhook
+            "url": webhook,
+            "access_token": '123432432423423423'
         }
     }
 
